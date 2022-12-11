@@ -28,7 +28,7 @@ mv ./work_dir/product.img ./product.img
 mv ./work_dir/vendor.img ./vendor.img
 clear
 figlet Creating DSU Package......
-zip  -1 -r ./dsu.zip ./system.img ./product.img ./vendor.img
+zip -r ./dsu.zip ./system.img ./product.img ./vendor.img
 echo "Create DSU Package successfully! now you can install DSU Package with ADB or DSU Sideloader app!!!"
 rm -rf work_dir
 rm *.img -f
