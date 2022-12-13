@@ -1,0 +1,30 @@
+#!/bin/bash
+brotli -d my_bigball.00011011.new.dat.br
+brotli -d my_engineering.new.dat.br
+brotli -d my_heytap.00011011.new.dat.br
+brotli -d my_manifest.00011011.new.dat.br
+brotli -d my_product.new.dat.br
+brotli -d my_region.00011011.new.dat.br
+brotli -d my_stock.00011011.new.dat.br
+brotli -d odm.new.dat.br
+brotli -d product.new.dat.br
+brotli -d system.new.dat.br
+brotli -d system_ext.new.dat.br
+brotli -d vendor.new.dat.br
+
+sdat2img.py my_bigball.00011011.transfer.list my_bigball.00011011.new.dat my_bigball.img
+sdat2img.py my_engineering.transfer.list my_engineering.new.dat my_engineering.img
+sdat2img.py my_heytap.00011011.tranfer.list my_heytap.00011011.new.dat my_heytap.img
+sdat2img.py my_manifest.00011011.new.dat.br my_manifest.00011011.new.dat my_manifest.img
+sdat2img.py my_product.transfer.list my_product.new.dat my_product.img
+sdat2img.py my_region.00011011.tranfer.list my_region.00011011.new.dat my_region.00011011.img
+sdat2img.py my_stock.00011011.tranfer.list my_stock.00011011.new.dat my_stock.img
+sdat2img.py odm.transfer.list odm.new.dat odm.img
+sdat2img.py product.tranfer.list product.new.dat product.img
+sdat2img.py system.transfer.list system.new.dat system.img
+sdat2img.py system_ext.transfer.list system_ext.new.dat system_ext.img
+sdat2img.py vendor.new.tranfer.list vendor.new.dat vendor.img
+
+mkdir output
+mv *.img ./output
+rm *
